@@ -1,0 +1,22 @@
+class Student:
+    def __init__(self):
+        self.name = ""
+        self.branch = ""
+        self.rank = ""
+
+# Create an object Stud_1 of the class
+stud_1 = Student()
+
+# Take the name as input
+stud_1.name = input("name: ")
+
+# Take the branch as input
+stud_1.branch = input("branch: ")
+
+# Take the rank as input
+stud_1.rank = input("rank: ")
+
+# Print the name, branch, and rank of the object
+print("Stud_1.name:", stud_1.name)
+print("Stud_1.branch:", stud_1.branch)
+print("Stud_1.rank:", stud_1.rank)
