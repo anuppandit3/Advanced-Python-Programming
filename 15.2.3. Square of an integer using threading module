@@ -1,0 +1,40 @@
+import threading
+import queue
+
+# Function to add numbers to the queue
+def add_numbers(numbers, num_queue):
+    for num in numbers:
+        num_queue.put(num)  # Add each number to the queue
+    num_queue.put(None)  # Signal the consumer to stop when all numbers are added
+
+# Function to calculate squares of numbers from the queue
+def calculate_squares(num_queue):
+    while True:
+        num = num_queue.get()  # Get a number from the queue
+        if num is None:  # Check if it's the signal to stop
+            break
+        print(f"Square of {num} is: {num * num}")  # Print the square of the number
+
+if __name__ == "__main__":
+    # Take input from the user
+    user_input = input("Enter a list of integers separated by spaces: ")
+    numbers = [int(num) for num in user_input.split()]  # Convert input to a list of integers
+    
+    # Create a queue to hold the numbers
+    num_queue = queue.Queue()
+
+    # Create and start the thread to add numbers to the queue
+    adder_thread = threading.Thread(target=add_numbers, args=(numbers, num_queue))
+    adder_thread.start()
+
+    # Create and start the thread to calculate squares from the queue
+    calculator_thread = threading.Thread(target=calculate_squares, args=(num_queue,))
+    calculator_thread.start()
+
+    # Wait for the adder thread to finish
+    adder_thread.join()
+
+    # Wait for the calculator thread to finish
+    calculator_thread.join()
+
+    print("Program finished!")
