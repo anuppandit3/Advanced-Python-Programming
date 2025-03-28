@@ -1,0 +1,29 @@
+'''class Car:
+    # Method to set the details of the car
+    def setDetails(self, model, regno):
+        self.model = model  # Store the model of the car
+        self.regno = regno  # Store the registration number of the car
+
+    # Method to get the model of the car
+    def getModel(self):
+        return self.model
+
+    # Method to get the registration number of the car
+    def getRegno(self):
+        return self.regno
+
+# Create two instances of the Car class
+Hyundai = Car()
+Maruthi = Car()
+
+# Test Case 1: Car details input
+model_hyundai = input("car1 model: ")  # Example input: Tuscon
+regno_hyundai = input("car1 regno: ")  # Example input: Ts19562A
+model_maruthi = input("car2 model: ")  # Example input: Baleno
+regno_maruthi = input("car2 regno: ")  # Example input: Ap12345
+
+# Set details for both cars using the setDetails method
+Hyundai.setDetails(model_hyundai, regno_hyundai)
+Maruthi.setDetails(model_maruthi, regno_maruthi)
+print("Hyundai car details:", Hyundai.getModel(), Hyundai.getRegno())
+print("Maruthi car details:", Maruthi.getModel(), Maruthi.getRegno())
