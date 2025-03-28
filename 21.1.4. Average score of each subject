@@ -1,0 +1,40 @@
+'''import pandas as pd
+
+
+
+
+
+import pandas as pd
+
+def analyze_student_scores():
+    # Data provided for student scores in different subjects
+    data = {'Student': ['Alice', 'Bob', 'Charlie', 'David', 'Eva'],
+            'Math': [85, 92, 78, 65, 89],
+            'English': [90, 88, 75, 82, 95],
+            'Science': [80, 85, 92, 70, 88]}
+    
+    # Create the DataFrame
+    df = pd.DataFrame(data)
+    
+    # Display the DataFrame
+    print("Student Exam Scores:")
+    print(df)
+    
+    # Calculate the average score for each subject
+    average_scores = df[['Math', 'English', 'Science']].mean()
+    
+    # Display the average scores
+    print("Average Score:")
+    print(average_scores)
+
+# Call the function to analyze student scores
+analyze_student_scores()
+
+
+
+
+
+
+
+
+
