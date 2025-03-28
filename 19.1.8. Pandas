@@ -1,0 +1,22 @@
+import pandas as pd
+
+# Create two Pandas Series
+s1 = pd.Series([1, 2, 3, 4, 5])
+s2 = pd.Series([6, 7, 8, 9, 10])
+
+# Addition
+addition = s1 + s2
+print("Addition:")
+print(addition)
+# Subtraction
+sub = s1 - s2
+print("Subtraction:")
+print(sub)
+# Multiplication
+mul= s1 * s2
+print("Multiplication:")
+print(mul)
+# Division
+div= s1 / s2
+print("Division:")
+print(div)
