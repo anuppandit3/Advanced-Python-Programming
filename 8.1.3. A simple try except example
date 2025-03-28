@@ -1,0 +1,29 @@
+'''num1 = int(input("num1: "))
+num2 = int(input("num2: "))
+try:
+
+except:
+'''
+
+
+num1 = int(input("num1: "))
+num2 = int(input("num2: "))
+
+try:
+    # Try to perform division
+    result = num1 / num2
+    print(result)  # Print the result of the division
+except ZeroDivisionError:
+    # Handle the case where division by zero occurs
+    print("exception occurred")
+	
+	# implement except block here
+
+
+
+
+
+
+
+
+
