@@ -1,0 +1,27 @@
+'''try:
+except AssertionError:
+    print("No even numbers found")'''
+
+
+def sum_of_even_numbers():
+    # Taking space-separated integers as input
+    numbers = list(map(int, input().split()))
+    
+    # List comprehension to find even numbers
+    even_numbers = [num for num in numbers if num % 2 == 0]
+    
+    try:
+        # Assert if there are no even numbers
+        assert len(even_numbers) > 0, "No even numbers found"
+        
+        # If there are even numbers, print their sum
+        print(sum(even_numbers))
+        
+    except AssertionError as e:
+        # Catch assertion error and print message
+        print(e)
+
+# Call the function
+sum_of_even_numbers()
+    
+
