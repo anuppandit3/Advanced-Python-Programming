@@ -1,0 +1,54 @@
+'''import re
+'''
+#write your code here..
+
+
+
+import re
+print("file name: ",end="")
+def extract_emails(filename):
+	
+	
+    try:
+        # Open the file in read mode
+        with open(filename, 'r') as file:
+            content = file.read()
+
+        # Regular expression pattern for matching email addresses (domain name is optional)
+        email_pattern = r'[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+(?:\.[a-zA-Z]{2,})?'
+
+        # Find all matches using the regex pattern
+        emails = re.findall(email_pattern, content)
+
+        # Print the filename and extracted emails (if any)
+        #print(f"file·name:·{filename}")
+
+        # Check if any email addresses are found
+        if emails:
+            for email in emails:
+                print(f"Email: {email}")
+        else:
+            print("No matches found")
+
+    except FileNotFoundError:
+        # Handle case where file doesn't exist
+        print(f"File '{filename}' not found")
+    except Exception as e:
+        # Catch any other exceptions and print them
+        print(f"An error occurred: {e}")
+
+# Take filename input from the user
+filename = input().strip()  # Removed prompt text to match expected output format
+extract_emails(filename)
+
+#write your code here..
+
+
+
+
+
+
+
+
+
+
