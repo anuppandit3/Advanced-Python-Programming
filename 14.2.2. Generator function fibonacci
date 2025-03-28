@@ -1,0 +1,10 @@
+def fibonacci(n):
+    a, b = 0, 1
+    while a <= n:
+        yield a
+        a, b = b, a + b
+
+# Test the generator function with user input
+n = int(input("n: "))
+for num in fibonacci(n):
+    print(num,end=" ")
