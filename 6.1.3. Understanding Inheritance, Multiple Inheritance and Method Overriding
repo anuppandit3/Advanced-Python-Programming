@@ -1,0 +1,57 @@
+'''#create an Animal class
+
+
+#create a Mammal class that inherits Animal class
+class
+	#define a method speak
+
+
+#input
+choice = input("Enter 'bird' to create a Bird or 'mammal' to create a Mammal: ")
+
+#write your logic here
+if
+	
+	
+elif
+	
+	
+else:
+	
+	
+	'''
+
+
+
+class Animal:
+    # Define a method speak
+    def speak(self):
+        print("Animal makes a sound")
+
+# Create a Bird class that inherits Animal class
+class Bird(Animal):
+    # Override the speak method
+    def speak(self):
+        print("Bird sings")
+
+# Create a Mammal class that inherits Animal class
+class Mammal(Animal):
+    # Override the speak method
+    def speak(self):
+        print("Mammal roars")
+
+# Input
+choice = input("Enter 'bird' to create a Bird or 'mammal' to create a Mammal: ")
+
+# Logic to create the object and call the speak method
+if choice.lower() == "bird":
+    bird = Bird()
+    bird.speak()  # Calling the speak method of Bird class
+elif choice.lower() == "mammal":
+    mammal = Mammal()
+    mammal.speak()  # Calling the speak method of Mammal class
+else:
+    print("Invalid choice")
+	
+	
+	
