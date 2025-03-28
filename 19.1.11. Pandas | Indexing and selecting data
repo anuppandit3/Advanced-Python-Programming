@@ -1,0 +1,59 @@
+'''import pandas as pd
+
+import pandas as pd
+
+# Created a sample DataFrame with columns 'Name', 'Age', and 'City'
+data = {
+    'Name': ['Mathew', 'Jane', 'Jack', 'David', 'Stella'],
+    'Age': [25, 30, 22, 35, 28],
+    'City': ['New York', 'San Francisco', 'Los Angeles', 'Chicago', 'Boston']
+}
+
+# Convert the dictionary 'data' into a pandas DataFrame
+df = pd.DataFrame(data)
+
+# Display the original DataFrame
+print("Original DataFrame:")
+print(df)
+
+# Indexing and selecting data using column names
+# Select the 'Name' column
+name_column = df['Name']
+
+# Select 'Age' and 'City' columns
+age_city_columns = df[['Age', 'City']]
+
+# Display the selected columns
+print("Selected Name Column:")
+
+
+
+
+print(name_column)
+
+print("Selected Age and City Columns:")
+print(age_city_columns)
+
+# Indexing and selecting data using row indices
+# Select the row with index 2
+row_index_2 = df.iloc[2]
+
+# Select multiple rows by indices 0, 3, and 4
+multiple_rows = df.iloc[[0, 3, 4]]
+
+# Display the selected rows
+print("Selected Row by Index 2:")
+print(row_index_2)
+
+print("Selected Rows by Indices 0, 3, and 4:")
+print(multiple_rows)
+
+# Select rows where Age is greater than 25
+rows_age_gt_25 = df[df['Age'] > 25]
+
+print("Selected Rows where Age is Greater than 25:")
+print(rows_age_gt_25)
+
+
+
+
