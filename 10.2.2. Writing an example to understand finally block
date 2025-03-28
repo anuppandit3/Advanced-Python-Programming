@@ -1,0 +1,52 @@
+'''try:
+    # If input for a is empty or invalid, print exception occurred and exit
+    a=input('a: ').strip()
+    if not a:
+        print("exception occurred")
+    else:
+        try:
+            # Try converting a to float
+            a = float(a)
+
+            # If a is valid, ask for b and process it
+            b = input("b: ").strip()
+
+            # If input for b is empty or invalid, print exception occurred
+            if not b:
+                print("exception occurred")
+            else:
+                try:
+                    # Try converting b to float
+                    b = float(b)
+
+                    # Check if either a or b is a non-integer float, print "exception occurred"
+                    if not a.is_integer() or not b.is_integer():
+                        print("exception occurred")
+
+                    # Perform arithmetic operations (this can throw exceptions)
+                    c = a + b
+                    try:
+                        d = a / b  # This could raise an ArithmeticError if b is 0
+                        # If both a and b are valid integers, print "try successful"
+                        if a.is_integer() and b.is_integer():
+                            print("try successful")  # Only print for integers
+                    except ArithmeticError:
+                        # Catch division by zero or any arithmetic related error
+                        print("arithmetic error occurred ")
+
+                except ValueError:
+                    # Catch invalid value errors (non-numeric inputs for b)
+                    print("exception occurred")
+
+        except ValueError:
+            # Catch invalid value errors (non-numeric inputs for a)
+            print("exception occurred")
+
+except Exception:
+    # Catch any other unexpected errors
+    print("Unexpected error:")
+
+finally:
+    # This block is always executed
+    print("executed in any condition")
+
