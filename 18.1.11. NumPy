@@ -1,0 +1,18 @@
+import numpy as np
+
+# Sample array
+arr = np.array([[4, 5, 2],
+                [9, 3, 7],
+                [1, 6, 8]])
+
+# Calculate the maximum and minimum values along the second axis (rows)
+max_vals = np.max(arr, axis=1)
+min_vals = np.min(arr, axis=1)
+
+# Calculate the difference between the maximum and minimum values
+diff = max_vals - min_vals
+
+# Print the result
+#print("Maximum values along the second axis:", max_vals)
+#print("Minimum values along the second axis:", min_vals)
+print(diff)
