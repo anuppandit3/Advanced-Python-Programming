@@ -1,0 +1,23 @@
+try:
+    # Take input from user
+    a = input("a: ")
+    b = input("b: ")
+
+    # Convert inputs to float for arithmetic operations
+    a = int(a)
+    b = float(b)
+
+    # Perform arithmetic operations
+    c =int(a * b)
+    d = a / b
+
+    # Display the results
+    print(f"try successful {c} {d}")
+
+except Exception:
+    # Catch any exception (like invalid input)
+    print("exception occurred")
+
+finally:
+    # This block is always executed
+    print("executed in any condition")
