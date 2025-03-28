@@ -1,0 +1,47 @@
+'''import pandas as pd
+        'Gender': ['M', 'F', 'M', 'F', 'M', 'F', 'M', 'F']}
+df = pd.DataFrame(data)
+
+# Displaying the final DataFrame
+print("Original DataFrame:")
+print(df)
+print("Selected Rows:")
+print(selected_rows)'''
+
+
+
+
+import pandas as pd
+# Sample DataFrame
+data = {
+    'Name': ['John', 'Jane', 'Bob', 'Alice', 'Mike', 'Sarah', 'Tom', 'Emily'],
+    'Age': [25, 30, 35, 40, 45, 28, 32, 38],
+    'City': ['New York', 'London', 'Paris', 'Tokyo', 'Sydney', 'Boston', 'Chicago', 'San Francisco'],
+    'Gender': ['M', 'F', 'M', 'F', 'M', 'F', 'M', 'F']
+}
+
+df = pd.DataFrame(data)
+
+# Prompt the user for conditions
+conditions = input("Enter conditions separated by commas (e.g., 'Age > 30', 'City == 'Paris'): ")
+
+# Split the conditions into a list, strip any extra spaces
+condition_list = [condition.strip() for condition in conditions.split(',')]
+
+# Apply the conditions to filter the DataFrame
+filtered_df = df
+for condition in condition_list:
+    try:
+        filtered_df = filtered_df.query(condition)
+    except Exception as e:
+        print(f"Error in condition '{condition}': {e}")
+
+# Display the original DataFrame
+print("Original DataFrame:")
+print(df)
+
+# Display the filtered DataFrame based on user input
+print("Selected Rows:")
+print(filtered_df)
+
+
