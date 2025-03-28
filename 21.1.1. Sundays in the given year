@@ -1,0 +1,45 @@
+'''import pandas as pd
+
+def main():
+	year = int(input("Enter the year: "))
+	sundays_calendar = generate_sundays(year)
+	print("Sundays in the year", year, ":")
+	print(sundays_calendar)
+
+if __name__ == "__main__":
+	main()
+'''
+
+
+
+
+
+import pandas as pd
+
+def generate_sundays(year):
+    # Generate all dates for the given year
+    start_date = f'{year}-01-01'
+    end_date = f'{year}-12-31'
+    dates = pd.date_range(start=start_date, end=end_date, freq='D')
+    
+    # Filter for Sundays (weekday == 6 means Sunday)
+    sundays = dates[dates.weekday == 6]
+    
+    # Create a DataFrame with the Sundays
+    sundays_df = pd.DataFrame(sundays, columns=["Date"])
+    
+    return sundays_df
+
+def main():
+    year = int(input("Enter the year: "))
+    sundays_calendar = generate_sundays(year)
+    print("Sundays in the year", year, ":")
+    print(sundays_calendar)
+
+if __name__ == "__main__":
+    main()
+
+
+
+
+
