@@ -1,0 +1,15 @@
+class Student:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+
+s1_name = input("s1 name: ")
+s1_age = int(input("s1 age: "))
+Stud_1 = Student(s1_name, s1_age)
+
+s2_name = input("s2 name: ")
+s2_age = int(input("s2 age: "))
+Stud_2 = Student(s2_name, s2_age)
+
+print('Stud_1.name:', Stud_1.name)
+print('Stud_2.name:', Stud_2.name)
