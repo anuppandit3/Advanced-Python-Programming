@@ -1,0 +1,26 @@
+class OurException(Exception):
+    # Define the constructor to accept a message
+    def __init__(self, message):
+        self.message = message
+
+class UsingUserException:
+    try:
+        # Taking input for a and b
+        a = float(input("a: "))
+        b = float(input("b: "))
+        
+        # Check if b is 0, raise the exception
+        if b == 0:
+            raise OurException("b should be > 0")
+        
+        # Perform the division operation
+        d = a / b
+        print("result:", d)
+        #print("division operation successful with result")
+
+    except OurException as err:
+        # Catch the user-defined exception
+        print("user defined exception:", err.message)
+
+# Test the program
+UsingUserException()
