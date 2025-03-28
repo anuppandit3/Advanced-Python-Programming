@@ -1,0 +1,51 @@
+'''class Car:
+'''
+
+
+
+class Car:
+    # Define the private variables
+    def __init__(self):
+        self.__engineno = ""
+        self.__modelno = ""
+        self.color = ""
+        self.year = ""
+
+    # Define the public method setcarinfo to set private variables
+    def setcarinfo(self, engineno, modelno):
+        self.__engineno = engineno
+        self.__modelno = modelno
+
+    # Define the public method getcarinfo to print the car information
+    def getcarinfo(self):
+        print(f"{self.__engineno} {self.__modelno} {self.color} {self.year}")
+
+# Create an instance hondacity of Car
+hondacity = Car()
+
+# Take input engine number from the user
+engnumber = input("engine number: ")
+
+# Call the setcarinfo method with the input, "SX6" as arguments
+hondacity.setcarinfo(engnumber, "SX6")
+
+# Set the color to "Blue"
+hondacity.color = "Blue"
+
+# Set the year to "2018"
+hondacity.year = "2018"
+
+# Call the getcarinfo method
+hondacity.getcarinfo()
+
+
+
+
+
+
+
+
+
+
+
+
