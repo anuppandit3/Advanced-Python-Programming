@@ -1,0 +1,5 @@
+name = input("name: ")
+salary = input("salary: ")
+
+# Printing the employee details in the required format
+print(f"name: {name} , salary: {salary}")
