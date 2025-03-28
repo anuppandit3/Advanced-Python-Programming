@@ -1,0 +1,32 @@
+class Person:
+    def setname(self, name):
+        self.name = name
+    
+    # Method to get the name
+    def getname(self):
+        print(f"{self.name}")
+
+# Derived class
+class Student(Person):
+    # Method to set the age
+    def setage(self, age):
+        self.age = age
+    
+    # Method to get the age
+    def getage(self):
+        print(f"{self.age}")
+
+# Take inputs from the user
+name = input("Please enter a name: ")
+age = int(input("Please enter age: "))
+
+# Create an instance of the Student class
+s1 = Student()
+
+# Set name and age using the respective methods
+s1.setname(name)
+s1.setage(age)
+
+# Call getname() and getage() to print the values
+s1.getname()
+s1.getage()
