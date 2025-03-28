@@ -1,0 +1,28 @@
+import threading
+
+# Function to reverse a string
+def reverse_string():
+    user_input = input("Enter a string: ")  # Prompt user for string input
+    print(f"Reversed string: {user_input[::-1]}")
+
+# Function to sum numbers from user input
+def sum_numbers():
+    user_input = input("Enter a list of numbers separated by spaces: ")  # Prompt for numbers
+    num_list = list(map(int, user_input.split()))  # Convert input string to list of integers
+    print(f"Sum of numbers: {sum(num_list)}")
+
+# Create threads for each function
+thread1 = threading.Thread(target=reverse_string)
+thread2 = threading.Thread(target=sum_numbers)
+
+# Start the first thread for reversing the string
+thread1.start()
+
+# Start the second thread for summing numbers
+thread2.start()
+
+# Wait for the threads to finish execution
+thread1.join()
+thread2.join()
+
+print("Program finished!")
