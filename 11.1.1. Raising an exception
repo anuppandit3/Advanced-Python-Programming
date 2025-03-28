@@ -1,0 +1,37 @@
+'''def checkage(age):
+	if age < 0:
+		raise ValueError("age should be greater than or equal to zero")
+	print("age is valid")
+# write your code here'''
+def checkage(age):
+    if age < 0:
+        raise ValueError("('age should be greater than or equal to zero',)")
+    print("age is valid")
+
+try:
+    # Read user's input and convert it to integer
+    age = int(input("age: "))
+    
+    # Call the checkage function with the entered age
+    checkage(age)
+
+except ValueError as e:
+    # If a ValueError occurs, print the error message
+    print(e)
+
+finally:
+    # This block is executed no matter what
+    print("executed in any condition")
+
+
+
+
+
+
+
+
+
+
+
+
+
