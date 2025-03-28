@@ -1,0 +1,26 @@
+'''class Manager:
+
+name = input("name: ")
+department = input("department: ")
+salary = int(input("salary: "))
+manager_1 = Manager(name, department, salary)
+print('Manager details:', manager_1.name, manager_1.department, manager_1.salary)'''
+class Manager:
+    # Define __init__ method with self, name, department, salary attributes
+    def __init__(self, name, department, salary):
+        # Initialize the attributes of the class instance
+        self.name = name
+        self.department = department
+        self.salary = salary
+
+# Take inputs for name, department, and salary
+name = input("name: ")
+department = input("department: ")
+salary = int(input("salary: "))  # Convert salary input to integer
+
+# Create an instance of the Manager class
+manager_1 = Manager(name, department, salary)
+
+# Print the details of the manager
+print('Manager details:', manager_1.name, manager_1.department, manager_1.salary)
+
