@@ -1,0 +1,58 @@
+'''import pandas as pd
+
+print("Selected Columns:")
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import pandas as pd
+
+# Sample Data
+data = {'Name': ['John', 'Jane', 'Bob', 'Alice', 'Mike'],
+        'Age': [25, 30, 35, 40, 45],
+        'City': ['New York', 'London', 'Paris', 'Tokyo', 'Sydney'],
+        'Salary': [25000, 30000, 40000, 50000, 35000]
+}
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Prompt the user to enter comma-separated column names
+input_columns = input("Enter comma-separated column names: ")
+
+# Split the input string into a list of column names and strip any spaces
+columns_list = [col.strip() for col in input_columns.split(",")]
+
+# Select the specified columns from the DataFrame
+selected_columns_df = df[columns_list]
+
+# Display the original DataFrame
+print("Original DataFrame:")
+print(df)
+
+# Display the selected columns
+print("Selected Columns:")
+print(selected_columns_df)
+
+
+
+
+
+
+
+
+
+
+
