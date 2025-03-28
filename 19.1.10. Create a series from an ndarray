@@ -1,0 +1,19 @@
+import pandas as pd
+
+# Import the NumPy library and give it the alias 'np'
+import numpy as np
+
+# Create a NumPy array
+data_array = np.array([10, 20, 30, 40, 50])
+
+# Create a pandas Series from the NumPy array
+data_series = pd.Series(data_array)
+
+# Display the original NumPy array
+print("Original NumPy Array:")
+print(data_array)
+
+# Display a message and the pandas Series
+print("Pandas Series:")
+print(data_series)
+
