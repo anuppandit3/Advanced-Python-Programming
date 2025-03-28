@@ -1,0 +1,61 @@
+'''import re
+
+
+
+import re
+import os
+def find_secret_code(file_path):
+
+    # Check if the file exists
+    if not os.path.exists(file_path):
+        print("file does not exist")
+        return
+
+    # Try to open and read the content of the file
+    try:
+        with open(file_path, 'r') as file:
+            content = file.read()
+    except Exception as e:
+        print(f"Error reading the file: {e}")
+        return
+
+    # Define the regular expression pattern
+    pattern = r'a.*b'
+
+    # Search for the pattern in the file content
+    if re.search(pattern, content):
+        print("Found a match!")
+    else:
+        print("Not matched!")
+
+
+file_path = input()
+find_secret_code(file_path)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
