@@ -1,0 +1,50 @@
+import numpy as np
+
+def get_matrix_info(rows, cols):
+    matrix = []
+    for i in range(rows):
+        row = []
+        for j in range(cols):
+            # Prompt the user to input each element of the matrix
+            element = float(input(f"Enter element [{i+1}][{j+1}]: "))
+            row.append(element)
+        matrix.append(row)
+    return np.array(matrix)
+
+def matrix_operations():
+    # Get input for the first matrix
+    rows1 = int(input("rows1: "))
+    cols1 = int(input("columns1: "))
+    print("elements for matrix1:")
+    matrix1 = get_matrix_info(rows1, cols1)
+    print("Matrix:")
+    print('',matrix1)
+
+    # Get input for the second matrix
+    rows2 = int(input("rows2: "))
+    cols2 = int(input("columns2: "))
+    print("elements for matrix2:")
+    matrix2 = get_matrix_info(rows2, cols2)
+    print("Matrix:")
+    print('',matrix2)
+
+    # Matrix Transpose
+    print("Transpose of the first matrix:\nMatrix:")
+    print('',matrix1.T)
+
+    # Matrix Addition (if dimensions are compatible)
+    if matrix1.shape == matrix2.shape:
+        print("Sum of the matrices:\nMatrix:")
+        print('',np.add(matrix1, matrix2))
+    else:
+        print("Matrices cannot be added.")
+
+    # Matrix Multiplication (if matrices are compatible for multiplication)
+    if matrix1.shape[1] == matrix2.shape[0]:
+        print("Product of the matrices:\nMatrix:")
+        print('',np.dot(matrix1, matrix2))
+    else:
+        print("Matrices cannot be multiplied.")
+
+# Run the program
+matrix_operations()
