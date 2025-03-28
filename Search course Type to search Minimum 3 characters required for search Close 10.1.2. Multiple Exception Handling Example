@@ -1,0 +1,72 @@
+'''try:
+
+
+# Handle NameError exception
+except  :
+	# Display corresponding error
+	
+
+except  :
+	# Display corresponding exception
+	
+def fun1(n):
+	print(n)
+
+'''
+
+
+try:
+    # Take user inputs a and b
+    a = int(input("a: "))
+    b = int(input("b: "))
+    
+    # Perform arithmetic operations
+    c = a + b
+    d = a / b
+    e = a * b
+    
+    # Display success message
+    print("try successful")
+
+# Handle division by zero exception
+except ZeroDivisionError:
+    print("zero division error occurred")
+
+# Handle NameError exception
+except NameError:
+    print("name error occurred")
+
+# Handle any other exceptions
+except Exception:
+    print("exception occurred")
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
