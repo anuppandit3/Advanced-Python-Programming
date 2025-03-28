@@ -1,0 +1,25 @@
+import pandas as pd
+import numpy as np
+
+# Create a DataFrame with missing values
+df = pd.DataFrame({'A': [1, 5, np.nan, 9],
+                   'B': [2, np.nan, 10, 14],
+                   'C': [np.nan, 7, 11, 15],
+                   'D': [4, 8, np.nan, 16]})
+
+# Replace missing values with mean using Pandas
+
+# Display the updated DataFrame
+
+
+#Replace missing values (NaN) in column 'B' with the mean of 'B'
+#df['B'] = df['B'].fillna(df['B'].mean())
+
+# Replace missing values (NaN) in column 'C' with the mean of 'C'
+#df['C'] = df['C'].fillna(df['C'].mean())
+df.at[2,'A']=5
+# Display the DataFrame after replacing NaNs selectively
+print(df)
+
+
+
