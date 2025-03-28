@@ -1,0 +1,10 @@
+import re
+
+mystring = "Hello!! Good Morning, Welcome to python tutorial class 24."
+
+# Find all occurrences of one or more 'e' or 'o' together
+matches = re.findall('[eo]+', mystring)
+
+# Iterate through the list and print all occurrences of 'e' and 'o'
+for m in matches:
+    print(m)
