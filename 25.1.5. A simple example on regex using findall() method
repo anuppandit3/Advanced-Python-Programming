@@ -1,0 +1,15 @@
+import re
+
+mystring = "Hello!! Good Morning, Welcome to python tutorial class 24.For any queries please email to contactus@codetantra.com"
+
+# Print word Hello that occurs in the defined string
+print(re.findall('^Hello', mystring))
+
+# Print any numbers that occur in the string
+print(re.findall(r'\d+', mystring))
+
+# Print all the a, b, c that occur in the string (including 'ac' as a single match)
+print(re.findall(r'ac|[abc]', mystring))
+
+
+
