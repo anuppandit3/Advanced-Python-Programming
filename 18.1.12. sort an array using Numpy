@@ -1,0 +1,36 @@
+'''import numpy as np
+# Create an array
+arr = np.array([9,8,7,6,5,4,3,2,1])
+'''
+
+import numpy as np
+
+# Create an array
+arr = np.array([9, 8, 7, 6, 5, 4, 3, 2, 1])
+
+# Sort the array using numpy
+sorted_arr = np.sort(arr)
+
+# Display the results
+print("Original array:", arr)
+print("Sorted array:", sorted_arr)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
