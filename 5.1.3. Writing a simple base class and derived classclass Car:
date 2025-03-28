@@ -1,0 +1,37 @@
+
+# Write your code here..
+
+
+#class Honda(Car):
+
+# Base class
+
+    # Method to set engine model
+    def setenginemodel(self, engine):
+        self.engine = engine
+
+    # Method to get engine model
+    def getenginemodel(self):
+        print(f"{self.engine}")
+
+# Derived class
+class Honda(Car):
+    # Method to set car model
+    def setcarmodel(self, model):
+        self.model = model
+
+    # Method to get car model
+    def getcarmodel(self):
+        print(f"{self.model}")
+
+# Creating an instance of Honda class
+mycar = Honda()
+
+# Setting engine model and car model
+mycar.setenginemodel('EK-1')
+mycar.setcarmodel('V6')
+
+# Printing car details
+print('Car Details:')
+mycar.getenginemodel()
+mycar.getcarmodel()
