@@ -1,0 +1,35 @@
+'''try:
+	# write your code here'''
+
+
+
+
+
+
+try:
+    # Read the user's input and convert it to an integer
+    age = int(input("age: "))
+    
+    # If the age is less than 0, raise a ValueError
+    if age < 0:
+        raise ValueError("age should be >= 0")
+    
+    # If the age is valid, print the doubled age
+    print(f"age doubled: {age * 2}")
+
+except ValueError as e:
+    # If a ValueError occurs, print the error message
+    print("age should be >= 0")
+
+finally:
+    # This block will always be executed
+    print("i am always executed")
+ 
+
+
+
+
+
+
+
+
