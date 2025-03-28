@@ -1,0 +1,26 @@
+import threading
+    
+    # Create a shared variable to store the result
+    result = [1]  # Using a list to store the result so it's mutable
+    
+    lock = threading.Lock()  # a lock object
+    
+    # Calculate the midpoint to split the factorial calculation into two ranges
+    midpoint = user_input // 2
+    
+    # Create two worker threads for factorial calculation
+    thread1 = threading.Thread(target=calculate_factorial, args=(1, midpoint, result, lock))
+    thread2 = threading.Thread(target=calculate_factorial, args=(midpoint + 1, user_input, result, lock))
+    
+    # Start the first worker thread for calculating factorial for the first half of the range
+    thread1.start()
+    
+    # Start the second worker thread for calculating factorial for the second half of the range
+    thread2.start()
+    
+    # Wait for the threads to finish
+    thread1.join()
+    thread2.join()
+    
+    # Print the final result after both threads have finished
+    print(f"The factorial of {user_input} is: {result[0]}")
