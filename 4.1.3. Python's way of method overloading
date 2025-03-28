@@ -1,0 +1,27 @@
+class Greeting:
+    def sayHello(self, name=None, wish=None):
+        # Case where both name and wish are provided
+        if name and wish:
+            print(f"Hello{name}{wish}!")
+        # Case where only name is provided
+        elif name:
+            print(f"Hello{name}")
+        # Case where only wish is provided (empty name)
+        elif wish:
+            print(f"Hello{wish}")
+        # Case where neither name nor wish is provided
+        else:
+            print("")
+
+# Create an instance of the Greeting class
+greet = Greeting()
+
+# Test the method with different inputs
+greet.sayHello()  # No parameters
+ # Only name
+greet.sayHello("Python")  # Name and wish
+greet.sayHello("PythonGood morning!!")  # Empty name, valid wish
+#greet.sayHello("Python", "")  # Valid name, empty wish
+#greet.sayHello("", "")  # Both name and wish are empty
+
+
