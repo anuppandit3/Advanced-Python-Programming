@@ -1,0 +1,36 @@
+'''try:
+	num1 = int(input("num1: "))
+	num2 = int(input("num2: "))
+	# perform division operator
+	
+except  :
+	# print respective error
+except  :
+	# print respective error'''
+
+
+
+try:
+    # Taking input from the user
+    num1 = int(input("num1: "))
+    num2 = int(input("num2: "))
+    
+    # Perform division
+    result = num1 / num2
+    print(result)
+
+except ZeroDivisionError:
+    # Handle division by zero error
+    print("Error: Division by zero is not allowed")
+
+except ValueError:
+    # Handle invalid input error
+    print("Error: Invalid input. Please enter valid integers")
+
+
+
+
+
+
+
+
