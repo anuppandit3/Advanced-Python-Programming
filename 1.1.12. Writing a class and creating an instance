@@ -1,0 +1,16 @@
+# Create an empty class Manager
+class Manager:
+    pass
+
+# Create an object manager_1 of the class Manager
+manager_1 = Manager()
+
+# Take three inputs: name, department, and salary
+manager_1.name = input("name: ")
+manager_1.department = input("department: ")
+manager_1.salary = float(input("salary: "))  # Assuming salary should be a float
+
+# Printing the details of the manager
+print("Emp_1.name:", manager_1.name)
+print("Emp_1.department:", manager_1.department)
+print("Emp_1.salary:", int(manager_1.salary))
