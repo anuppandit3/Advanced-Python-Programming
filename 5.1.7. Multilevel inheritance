@@ -1,0 +1,54 @@
+'''class Person:
+class Student( ):
+class Address( ):
+s1 = Address()
+Name = input()
+Age = int(input())
+Place = input()
+
+s1.getname()
+s1.getage()
+s1.getaddress()'''
+
+class Person:
+    def setname(self, name):
+        self.name = name
+    
+    def getname(self):
+        print(self.name)
+
+# Define the Student class that inherits from Person
+class Student(Person):
+    def setage(self, age):
+        self.age = age
+    
+    def getage(self):
+        print(self.age)
+
+# Define the Address class that inherits from Student
+class Address(Student):
+    def setaddress(self, address):
+        self.address = address
+    
+    def getaddress(self):
+        print(self.address)
+
+# Create an instance of Address
+s1 = Address()
+
+# Take input from the user for name, age, and address
+name = input("")
+age = int(input(""))
+address = input("")
+
+# Set the attributes using the methods
+s1.setname(name)
+s1.setage(age)
+s1.setaddress(address)
+
+# Get and print the attributes using the respective methods
+s1.getname()
+s1.getage()
+s1.getaddress()
+
+
