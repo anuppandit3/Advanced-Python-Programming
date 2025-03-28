@@ -1,0 +1,51 @@
+
+# Calculate and print the sum of all elements in the `numbers2` array
+sum_of_elements2 = np.sum(numbers2)
+print("The sum of array elements is:", sum_of_elements2)
+
+# Matrix multiplication
+matrix1 = np.array([[1, 2, 3], [4, 5, 6]])
+matrix2 = np.array([[7, 8], [9, 10], [11, 12]])
+
+# Perform matrix multiplication and print the result
+result = np.dot(matrix1, matrix2)
+print(result)
+
+matrix3 = np.array([[11, 22, 33], [44, 55, 66]])
+matrix4 = np.array([[77, 88], [99, 100], [111, 122]])
+
+# Perform matrix multiplication of matrix3 and matrix4 and print the result
+result2 = np.dot(matrix3, matrix4)
+print(result2)
+
+# Element-wise operations
+numbers3 = np.array([1, 2, 3, 4, 5])
+# Perform element-wise operations (square and cube each element)
+squared_numbers = np.square(numbers3)
+cubed_numbers = np.power(numbers3, 3)
+
+print("Squared array:")
+print(squared_numbers)
+print("Cubed array:")
+print(cubed_numbers)
+
+# Perform square root for each element in `numbers4`
+numbers4 = np.array([11, 22, 33, 44, 55, 66])
+sqrt_numbers4 = np.sqrt(numbers4)
+print("Sqrt of array:")
+print(sqrt_numbers4)
+
+# Reshaping Arrays
+numbers5 = np.array([1, 2, 3, 4, 5, 6])
+
+# Reshape the array into a 2x3 matrix
+matrix = numbers5.reshape(2, 3)
+print("Reshaped matrix:")
+print(matrix)
+
+# Reshaping `numbers6` into a 2xN matrix where N is inferred
+numbers6 = np.array([1, 2, 3, 4, 5, 6])
+reshaped_matrix2 = numbers6.reshape(2, -1)
+print("Reshaped matrix:")
+print(reshaped_matrix2)
+
