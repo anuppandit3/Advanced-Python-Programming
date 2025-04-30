@@ -1,0 +1,47 @@
+'''try:
+	# write your code'''
+
+
+
+
+
+
+try:
+    # Taking two inputs from the user
+    a = int(input("a: "))
+    b = int(input("b: "))
+    
+    # Perform arithmetic operations
+    c = a + b
+    d = a / b  # Division operation
+    e = a * b
+    
+    # Print success message if no error occurs
+    print("try successful")
+
+# Handling division by zero error
+except ZeroDivisionError:
+    print("zero division error occurred")
+
+# Handling any other arithmetic errors
+except ArithmeticError:
+    print("arithmetic error occurred")
+
+# Handling any other exceptions
+except Exception:
+    print("exception occurred")
+	# write your code
+
+
+
+
+
+
+
+
+
+
+
+
+
+
