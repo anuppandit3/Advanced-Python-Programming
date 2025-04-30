@@ -1,0 +1,36 @@
+'''import numpy as np
+'''
+import numpy as np
+
+# Create a 3x4 matrix with sequential values starting from 10 up to 21
+matrix = np.arange(10, 22).reshape(3, 4)
+
+# Print the original matrix
+print(matrix)
+
+# Replace any occurrence of 21 with its square (21 * 21)
+matrix[matrix == 21] = 21 * 21
+
+# Print the modified matrix
+print("After replacing")
+print(matrix)
+
+# write your code here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
