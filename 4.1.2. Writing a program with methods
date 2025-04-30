@@ -1,0 +1,54 @@
+'''class Person:
+
+p1 = Person()
+p2 = Person()
+name1 = input('p1 name: ')
+name2 = input('p2 name: ')
+
+p1. (name1)
+p2. (name2)'''
+
+
+
+'''class Person:
+	
+	#fill in the missing code
+
+3
+p1 = Person()
+p2 = Person()
+name1 = input('p1 name: ')
+name2 = input('p2 name: ')
+
+p1. (name1)
+p2. (name2)
+'''
+# Define the Person class
+class Person:
+    # Method to set the name
+    def setName(self, name):
+        self.name = name
+    
+    # Method to get the name
+    def getName(self):
+        return self.name
+
+# Create instances p1 and p2 of the class Person
+p1 = Person()
+p2 = Person()
+
+# Test Case 1
+name1 = input('p1 name: ')  # Example: Javiera
+name2 = input('p2 name: ')  # Example: Antonia
+
+p1.setName(name1)
+p2.setName(name2)
+
+
+
+p1.setName(name1)
+p2.setName(name2)
+
+# Print names of p1 and p2
+print(f"p1 name: {p1.getName()}")
+print(f"p2 name: {p2.getName()}")
