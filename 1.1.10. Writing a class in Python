@@ -1,39 +1,47 @@
-'''#create an empty class Student
-class 
-
-#create an object Stud_1 of the class
-
-#Take the name as input
-Stud_1.name =
-#Take the branch as input
-Stud_1.branch = 
-#Take the rank as input
-Stud_1.rank = 
-#print the name, age and rank of the object
-print("Stud_1.name:" )
-print("Stud_1.branch:", )
-print("Stud_1.rank:", )
+'''print("Stud_1.name:", Stud_1.name)
+print("Stud_1.age:", Stud_1.age)
+print("Stud_1.graduate:", Stud_1.graduate)
+print("Stud_2.name:", Stud_2.name)
+print("Stud_2.age:", Stud_2.age)
+print("Stud_2.graduate:", Stud_2.graduate)
 '''
-
+'''
+print("Stud_1.name:", Stud_1.name)
+print("Stud_1.age:", Stud_1.age)
+print("Stud_1.graduate:", Stud_1.graduate)
+print("Stud_2.name:", Stud_2.name)
+print("Stud_2.age:", Stud_2.age)
+print("Stud_2.graduate:", Stud_2.graduate)
+'''
+# Create a class Student
 class Student:
     def __init__(self):
         self.name = ""
-        self.branch = ""
-        self.rank = ""
+        self.age = ""
+        self.degree = ""  # 'degree' attribute
 
 # Create an object Stud_1 of the class
-stud_1 = Student()
+Stud_1 = Student()
 
-# Take the name as input
-stud_1.name = input("name: ")
+# Take inputs for Stud_1
+Stud_1.name = input("s1 name: ")
+Stud_1.age = input("s1 age: ")
+Stud_1.degree = input("s1 degree: ")
 
-# Take the branch as input
-stud_1.branch = input("branch: ")
+# Create an object Stud_2 of the class
+Stud_2 = Student()
 
-# Take the rank as input
-stud_1.rank = input("rank: ")
+# Take inputs for Stud_2
+Stud_2.name = input("s2 name: ")
+Stud_2.age = input("s2 age: ")
+Stud_2.degree = input("s2 degree: ")
 
-# Print the name, branch, and rank of the object
-print("Stud_1.name:", stud_1.name)
-print("Stud_1.branch:", stud_1.branch)
-print("Stud_1.rank:", stud_1.rank)
+# Printing the details of the two students
+print("Stud_1.name:", Stud_1.name)
+print("Stud_1.age:", Stud_1.age)
+print("Stud_1.graduate:", Stud_1.degree)  # Corrected to print 'degree' instead of 'graduate'
+
+print("Stud_2.name:", Stud_2.name)
+print("Stud_2.age:", Stud_2.age)
+print("Stud_2.graduate:", Stud_2.degree)  # Corrected to print 'degree' instead of 'graduate'
+
