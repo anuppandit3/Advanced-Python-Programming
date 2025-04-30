@@ -1,0 +1,44 @@
+import matplotlib.pyplot as plt
+
+# Sample rainfall data for Tamil Nadu districts in November
+districts = ["Chennai", "Coimbatore", "Madurai", "Trichy", "Tirunelveli", "Salem", "Karur", "Vellore", "Erode"]
+rainfall = [150, 220, 180, 160, 280, 200, 250, 170, 190]
+
+# Calculate rainfall percentage for Karur
+
+
+
+# Plotting rainfall for all areas and highlighting the district with maximum rainfall
+plt.figure(figsize=(10, 6))
+plt.title('Rainfall in Tamil Nadu Districts - November')
+
+
+# Annotate rainfall percentage for Karur
+
+
+
+# Calculate rainfall percentage for Karur
+total_rainfall = sum(rainfall)
+karur_rainfall = rainfall[districts.index("Karur")]
+karur_percentage = (karur_rainfall / total_rainfall) * 100
+
+# Plotting rainfall for all areas and highlighting the district with maximum rainfall
+plt.figure(figsize=(10, 6))
+
+# Color the bars, with red for the highest rainfall and sky blue for others
+colors = ['skyblue' if rain != max(rainfall) else 'red' for rain in rainfall]
+
+# Plotting the bar graph
+plt.bar(districts, rainfall, color=colors)
+
+# Adding labels and title
+plt.xlabel('Districts')
+plt.ylabel('Rainfall (mm)')
+plt.title('Rainfall in Tamil Nadu Districts - November')
+
+# Annotate rainfall percentage for Karur
+plt.text(6, karur_rainfall + 10, f'{karur_percentage:.2f}%', ha='center', va='bottom', color='black')
+
+# Show grid and plot
+
+plt.show()
