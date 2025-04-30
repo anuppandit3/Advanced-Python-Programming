@@ -1,0 +1,28 @@
+'''Honda = Car()
+carname = input("car name: ")
+Honda.setName(carname)
+print("Honda car name:", Honda.getName())'''
+
+class Car:
+    # Define the method setName with self and name as arguments
+    def setName(self, name):
+        self.name = name  # Assign the name to the instance's name attribute
+    
+    # Define the method getName with self as the argument
+    def getName(self):
+        return self.name  # Return the name of the car
+
+# Create an instance of the Car class
+Honda = Car()
+
+# Take the car name as input from the user
+carname = input("car name: ")
+
+# Set the car name using the setName method
+Honda.setName(carname)
+
+# Retrieve the car name using the getName method and print it
+print("Honda car name:", Honda.getName())
+
+
+
