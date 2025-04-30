@@ -1,0 +1,82 @@
+'''class Car:
+	def setbrandname(self, brandname):
+		# Write your code here
+		
+	def getbrandname(self):
+		# Write your code here
+		
+	def setmodel(self, model):
+		# Write your code here
+		
+	def getmodel(self):
+		# Write your code here
+		
+class Accord(Car):
+	def setbrandname(self, brandname):
+		# Write your code here
+		
+	def getbrandname(self):
+		# Write your code here
+		
+blueaccord = Accord() #instance of Accord
+# set the brand and model name by taking the input from the user
+
+#print the brand and model name using the get methods
+
+'''
+
+class Car:
+    def setbrandname(self, brandname):
+        # Set the brand name for the car
+        self.brandname = brandname
+        
+    def getbrandname(self):
+        # Get the brand name of the car
+        return self.brandname
+        
+    def setmodel(self, model):
+        # Set the model name for the car
+        self.model = model
+        
+    def getmodel(self):
+        # Get the model name of the car
+        return self.model
+
+class Accord(Car):
+    # Overriding the setbrandname method of the Car class
+    def setbrandname(self, brandname):
+        self.brandname = brandname  # This is specific to Accord, overriding Car's setbrandname
+        
+    # Overriding the getbrandname method of the Car class
+    def getbrandname(self):
+        return self.brandname  # This is specific to Accord, overriding Car's getbrandname
+
+# Create an instance of Accord
+accord_car = Accord()
+
+# Take input for the brand name and model name from the user
+brandname = input("brand: ").strip()
+modelname = input("model: ").strip()
+
+# Set the brand and model using the set methods
+accord_car.setbrandname(brandname)
+accord_car.setmodel(modelname)
+
+# Print the brand and model using the get methods
+print(accord_car.getbrandname())
+print(accord_car.getmodel())
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
