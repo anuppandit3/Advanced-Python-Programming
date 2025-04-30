@@ -1,0 +1,29 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+# Sample dataset
+data = {
+    'Variable_1': [10, 20, 30, 40, 50],
+    'Variable_2': [5, 15, 25, 35, 45]
+}
+
+# write your code here...
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Scatter Plot
+plt.scatter(df['Variable_1'], df['Variable_2'])
+
+# Calculate Correlation Coefficient
+correlation = df['Variable_1'].corr(df['Variable_2'])
+
+# Add correlation coefficient to the plot
+plt.text(20, 30, f'Correlation coefficient: {correlation:.2f}', fontsize=10)
+plt.title('Scatter Plot of Variable 1 vs Variable 2')
+# Labels
+plt.xlabel('Variable 1')
+plt.ylabel('Variable 2')
+plt.show()
+
+
+
