@@ -1,0 +1,56 @@
+'''class 
+	def
+	def
+	def
+'''
+class Student:
+    # Define two private variables __group, __report with default values
+    __group = "ECE"
+    __report = "fail"
+    
+    # Define the __init__ method to set name and age
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+    
+    # Define the setdetails method with the two private variables
+    def setdetails(self, group, report):
+        self.__group = group
+        self.__report = report
+    
+    # Define the getdetails method
+    def getdetails(self):
+        print(f"{self.name}",end="")
+        print(f" {self.age}",end="")
+        print(f" {self.__group}",end="")
+        print(f" {self.__report}")
+
+# Take the inputs from the user
+name = input("Name: ")
+age = int(input("age: "))
+group = input("group: ")
+report = input("pass/fail: ")
+
+print("Student Report Card")
+# Create an instance s1 of Student with name and age as arguments
+s1 = Student(name, age)
+
+# Call the setDetails method with group and report as arguments
+s1.setdetails(group, report)
+
+# Call the getdetails method with the s1 object
+s1.getdetails()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
