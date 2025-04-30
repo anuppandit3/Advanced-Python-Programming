@@ -1,0 +1,59 @@
+'''import numpy as np
+import matplotlib.pyplot as plt
+
+
+x = np.linspace(0, 10, 100)
+
+y1 = # Sinusoidal curve
+y2 = # Cosine curve
+y3 = # Tangent curve
+
+
+# Create a figure with multiple subplots
+
+
+# Plot data on subplots
+
+
+# Set titles for each subplot
+
+
+# Add legends to each subplot
+
+
+# Show the plot by adjusting the layout to avoid overlap
+'''
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Generate x values
+x = np.linspace(0, 10, 100)
+
+# Define the functions
+y1 = np.sin(x)
+y2 = np.cos(x)
+y3 = np.tan(x)
+
+# Create a figure with 3 subplots arranged in a single column
+fig, axs = plt.subplots(3, 1, figsize=(8, 10))
+
+# First subplot: Sinusoidal curve
+axs[0].plot(x, y1, color='blue', label='Sin')
+axs[0].set_title("Sin Plot")
+axs[0].legend()
+
+# Second subplot: Cosine curve
+axs[1].plot(x, y2, color='green', label='Cos')
+axs[1].set_title("Cos Plot")
+axs[1].legend()
+
+# Third subplot: Tangent curve
+axs[2].plot(x, y3, color='red', label='Tan')
+axs[2].set_title("Tan Plot")
+axs[2].legend()
+
+# Adjust layout to prevent overlapping
+plt.tight_layout()
+
+# Show the plot
+plt.show()
