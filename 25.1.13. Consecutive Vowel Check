@@ -1,0 +1,53 @@
+'''import re
+
+# write your code here..'''
+
+
+
+
+
+
+
+import re
+def consecutive_vowel_check(sentence):
+    # Define vowels for comparison
+    vowels = "aeiouAEIOU"
+    
+    # Split the sentence into words
+    words = sentence.split()
+    
+    # Iterate through each consecutive pair of words
+    for i in range(len(words) - 1):
+        # Check if the last character of the current word is a vowel
+        # and the first character of the next word is a vowel
+        if words[i][-1] in vowels and words[i + 1][0] in vowels:
+            return True
+    
+    # If no such pair is found, return False
+    return False
+
+# Take user input for a sentence
+sentence = input("")
+
+# Call the function and print the result
+result = consecutive_vowel_check(sentence)
+print(result)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
