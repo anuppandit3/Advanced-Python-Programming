@@ -1,0 +1,61 @@
+'''class ReverseIterator:
+
+reverse_iterator = ReverseIterator()
+print("Iterating over the sequence in reverse order:")
+for item in reverse_iterator:
+	print(item)
+'''
+
+
+
+
+
+class ReverseIterator:
+    def __init__(self):
+        # Prompt the user to enter a sequence (string, list, or any iterable)
+        self.sequence = input("Enter a sequence: ")
+        
+        # Convert the input into a list, if it's a string, it's already an iterable
+        if isinstance(self.sequence, str):
+            self.sequence = list(self.sequence)
+        else:
+            self.sequence = list(self.sequence)
+        
+        # Initialize the index to the last element of the sequence
+        self.index = len(self.sequence) - 1
+
+    def __iter__(self):
+        # The object itself is the iterator, so return self
+        return self
+
+    def __next__(self):
+        # Check if the index is valid
+        if self.index >= 0:
+            # Return the element and update the index to move to the previous item
+            item = self.sequence[self.index]
+            self.index -= 1
+            return item
+        else:
+            # Stop iteration when we've gone past the first element
+            raise StopIteration
+
+
+# Create an instance of ReverseIterator
+reverse_iterator = ReverseIterator()
+
+# Iterating over the sequence in reverse order
+print("Iterating over the sequence in reverse order:")
+for item in reverse_iterator:
+    print(item)
+ 
+
+
+
+
+
+
+
+
+
+
+
