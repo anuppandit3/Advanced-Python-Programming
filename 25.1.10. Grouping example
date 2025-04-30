@@ -1,0 +1,19 @@
+# write your code here
+import re
+
+# Get a string from the user which has 4 words separated by commas
+mystring = input("data: ")
+
+# Search using grouping in the string
+match = re.search(r'(\w+),(\w+),(\w+),(\w+)', mystring)
+
+# Check if match is found
+if match is None:
+    print("you have not entered 4 words")
+else:
+    # Print full match and groups
+    print("full:", match.group(0))
+    print("group 1:", match.group(1))
+    print("group 2:", match.group(2))
+    print("group 3:", match.group(3))
+    print("group 4:", match.group(4))
