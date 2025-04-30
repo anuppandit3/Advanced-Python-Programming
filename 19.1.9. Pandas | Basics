@@ -1,0 +1,95 @@
+'''import pandas as pd
+df = pd.DataFrame(data1)
+print("DataFrame:")
+print(df)
+
+data2 = {'Name': ['Doraemon', 'Nobita', 'Shizuka'],
+        'Salary': [10000, 5000, 7500]}
+        
+# Write code below to create dataframe named df2 for dataset `data2` and print result
+
+
+
+""" Data filtering and selection in Pandas """
+
+# Filter the DataFrame based on a condition and print result
+filtered_df = df[df['Age'] > 23]
+print("Filtered DataFrame:")
+print(filtered_df)
+
+# Filter the `data2` dataset to print names with salaries greater than 5000
+
+
+
+""" Basic Statistical Analysis using Pandas """
+
+# Perform basic statistical analysis
+mean_age = df['Age'].mean()
+max_age = df['Age'].max()
+min_age = df['Age'].min()
+
+# Print the statistical results
+print("Mean Age:", mean_age)
+print("Maximum Age:", max_age)
+print("Minimum Age:", min_age)
+
+# Print the average salary of all names from `d2` dataframe created above
+
+
+'''
+
+
+
+
+
+
+
+
+
+
+
+'''import pandas as pd
+# Print the average salary of all names from `d2` dataframe created above
+'''
+import pandas as pd
+
+# Creating DataFrames
+
+# DataFrame 1 with Name, Age, and City
+data1 = {'Name': ['John', 'Alice', 'Bob'],
+         'Age': [25, 28, 22],
+         'City': ['New York', 'London', 'Paris']}
+df = pd.DataFrame(data1)  # This defines df
+print("DataFrame:")
+print(df)
+
+# DataFrame 2 with Name and Salary
+data2 = {'Name': ['Doraemon', 'Nobita', 'Shizuka'],
+         'Salary': [10000, 5000, 7500]}
+df2 = pd.DataFrame(data2)  # This defines df2
+print("DataFrame:")
+print(df2)
+
+# Data filtering and selection
+filtered_df = df[df['Age'] > 23]
+print("Filtered DataFrame:")
+print(filtered_df)
+
+filtered_df2 = df2[df2['Salary'] > 5000]
+print("Filtered DataFrame:")
+print(filtered_df2)
+
+# Basic Statistical Analysis
+mean_age = df['Age'].mean()  # Mean Age
+max_age = df['Age'].max()    # Maximum Age
+min_age = df['Age'].min()    # Minimum Age
+avg_salary = df2['Salary'].mean()  # Average Salary
+
+# Print statistical results
+print(f"Mean Age: {mean_age}")
+print(f"Maximum Age: {max_age}")
+print(f"Minimum Age: {min_age}")
+print(f"Average Salary: {avg_salary}")
+
+
+
