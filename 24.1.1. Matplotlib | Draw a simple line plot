@@ -1,0 +1,16 @@
+# Import necessary libraries
+import matplotlib.pyplot as plt
+
+# Sample data
+x_values = [1, 2, 3, 4, 5]
+y_values = [2, 4, 6, 8, 10]
+
+
+plt.plot(x_values,y_values,label='Line',color='blue')            
+plt.scatter(x_values,y_values,color='blue',zorder=5)# Add title and labels
+plt.title('Simple Line Plot')
+plt.xlabel('X-axis Label')
+plt.ylabel('Y-axis Label')
+
+# Display the plot
+plt.show()
