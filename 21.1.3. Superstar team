@@ -1,0 +1,58 @@
+'''import pandas as pd
+
+# Meet Your Team
+data = {'Name': ['Alice', 'Bob', 'Charlie'],
+		'Age': [25, 30, 35],
+		'Salary': [50000, 60000, 75000]}
+
+# write your code here..
+
+
+
+average_salary = 
+
+print("Average Salary:", average_salary)
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+import pandas as pd
+
+# Meet Your Team
+data = {'Name': ['Alice', 'Bob', 'Charlie'],
+        'Age': [25, 30, 35],
+        'Salary': [50000, 60000, 75000]}
+
+# Create the DataFrame
+df = pd.DataFrame(data)
+
+# Display the first 3 rows (though there are only 3 rows)
+print(df.head(3))
+
+# Calculate the average salary
+average_salary = df['Salary'].mean()
+
+# Print the average salary
+
+
+print("Average Salary:", average_salary)
+
+
+
+
