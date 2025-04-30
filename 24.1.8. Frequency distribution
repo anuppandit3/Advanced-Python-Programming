@@ -1,0 +1,54 @@
+import matplotlib.pyplot as plt
+
+# Sample dataset
+categories = ['A', 'B', 'C', 'D', 'E']
+values_group1 = [25, 30, 20, 35, 40]  # Values for Group 1
+values_group2 = [30, 35, 25, 40, 45]  # Values for Group 2
+
+# Set width of bars
+bar_width = 0.35
+
+
+
+import numpy as np
+
+
+# Set position of bars on X axis
+x = np.arange(len(categories))
+
+# Plot bars with correct colors and width
+plt.bar(x, values_group1, color='b', width=bar_width, label='Group 1')  # Blue Bar
+plt.bar(x + bar_width, values_group2, color='r', width=bar_width, edgecolor='grey', label='Group 2')  # Red Bar
+
+# Add labels and title
+plt.xlabel('Categories')
+plt.ylabel('Frequency')
+plt.title('Bar Chart of Categorical Variable Across Different Categories')
+
+# Set x-ticks in the middle of the grouped bars
+plt.xticks(x + bar_width/2, categories)
+
+# Add legend
+plt.legend()
+
+# Show the plot
+plt.show()
+
+
+# Plot bars
+
+
+# Add xlabel as Categories
+
+
+# Add xticks on the middle of the group bars
+
+
+# Add ylabel as Frequency
+
+
+# Add title as Bar Chart of Categorical Variable Across Different Categories
+
+
+# Add legend and display the plot
+
