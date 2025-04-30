@@ -1,0 +1,52 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+from pyodide.http import open_url
+
+url = 'https://ct-public-bucket.s3.ap-south-1.amazonaws.com/lms/niet/alphabet_stock_data.csv'
+
+csv_data = open_url(url)
+df = pd.read_csv(csv_data)
+
+
+# Convert 'Date' column to datetime
+df['Date'] = pd.to_datetime(df['Date'])
+
+# Filter rows between 2020-04-01 and 2020-10-31 inclusive
+df_filtered = df[(df['Date'] >= '2020-04-01') & (df['Date'] <= '2020-10-31')]
+
+# Create line plot with figure size (12, 6)
+plt.figure(figsize=(12, 6))  # Keep figure size as (12, 6)
+
+# Plot the opening and closing prices
+plt.plot(df_filtered['Date'], df_filtered['Open'], label='Open', color='blue')
+plt.plot(df_filtered['Date'], df_filtered['Close'], label='Close', color='green')
+
+# Add title and axis labels
+plt.title('Alphabet Inc. Stock Prices', fontsize=14)
+plt.xlabel('Date', fontsize=12)
+plt.ylabel('Price', fontsize=12)
+
+# Rotate the x-axis labels for better readability
+plt.xticks(rotation=45)
+
+# Shift the plot downwards by adjusting the y-axis limits
+plt.ylim(900, 1600)  # Lower the minimum y-axis value to shift plot down
+
+# Adjust the layout to reduce the width of the plot area (keeping overall figsize)
+plt.subplots_adjust(left=0.1, right=0.1, top=0.1, bottom=0.1)  # Adjust the margins
+
+# Adjust all spines (borders) to be the same thickness and color
+ax = plt.gca()  # Get the current axes
+spine_color = 'black'  # Set color for the spines
+
+# Set the same line width and color for all spines (borders)
+for spine in ax.spines.values():
+    spine.set_linewidth(2)  # Set line width for all spines
+    spine.set_color(spine_color)  # Set color for all spines
+
+# Add a legend
+plt.legend()
+
+# Show the plot
+plt.show()
+
