@@ -1,0 +1,28 @@
+import pandas as pd
+import matplotlib.pyplot as plt
+
+data = {
+    "Category": ["A", "A", "A", "A", "B", "B", "B", "B", "C", "C", "C", "C", "D", "D", "D"],
+    "Value": [45, 50, 47, 54, 72, 65, 67, 70, 36, 38, 39, 34, 84, 80, 82]
+}
+
+# write your code here..
+
+
+#plt.figure(figsize=(10, 6))
+
+
+# Create DataFrame
+df = pd.DataFrame(data)
+
+# Group data by category
+grouped_values = [df[df["Category"] == cat]["Value"] for cat in sorted(df["Category"].unique())]
+
+# Create box plot
+plt.figure(figsize=(10, 6))
+plt.boxplot(grouped_values, labels=sorted(df["Category"].unique()))
+plt.title("Box plot of Value Across Different Categories")
+plt.xlabel("Category")
+plt.ylabel("Value")
+plt.grid(True)
+plt.show()
