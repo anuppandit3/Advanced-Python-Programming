@@ -1,0 +1,31 @@
+'''class Greeting:
+'''
+
+#write your code here....
+
+class Greeting:
+    def sayHello(self, name=None, wish=None):
+        if name and wish:  # Both name and wish are provided
+            print(f"Hello{name}{wish}")
+        elif name:  # Only name is provided
+            print(f"Hello{name}")
+        else:  # Neither name nor wish is provided
+            print("Hello!")
+
+# Create object of class Greeting
+greet = Greeting()
+
+# Test Case 1: Take input
+a = input()  # Input for name (e.g., "Python")
+b = input()  # Input for wish (e.g., "Good morning!!")
+
+# Call the method with different arguments
+greet.sayHello(a)  # Call with only name
+greet.sayHello(a, b)  # Call with both name and wish
+
+
+
+'''a = input()
+b = input()
+greet.sayHello( )
+greet.sayHello( )'''
