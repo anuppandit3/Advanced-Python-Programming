@@ -1,0 +1,28 @@
+TryAgain = True
+while TryAgain:
+    try:
+        # Prompt the user to enter a whole number
+        Value = int(input("whole number: "))
+    except ValueError:
+        # Handle ValueError when input is not a valid number
+        print("you must enter a whole number!")
+        try:  # Nested try block
+            # Prompt to try again or not
+            user_choice = input("try again (y/n)? ").lower()
+            if user_choice == 'n':
+               # print("ok, see you next time!")
+                TryAgain = False  # Exit the loop
+            elif user_choice != 'y':
+                print("ok, see you next time!")
+                TryAgain = False  # Exit the loop
+        except:  # Handle any unexpected exception inside the nested block
+           # print("ok, see you next time!")
+            TryAgain = False
+    except KeyboardInterrupt:
+        # Handle the case where the user presses Ctrl+C
+        print("\nYou pressed Ctrl+C! See you next time!")
+        TryAgain = False
+    else:
+        # If no exception occurs, print the value and continue asking
+        print(Value)
+        TryAgain = True
