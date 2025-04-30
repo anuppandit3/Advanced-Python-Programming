@@ -1,0 +1,41 @@
+import numpy as np
+import matplotlib.pyplot as plt
+
+# Sample dataset
+x = np.array([1, 2, 3, 4, 5])
+y = np.array([2, 3, 5, 4, 6])
+
+
+# Fit a linear regression model
+m, b = np.polyfit(x, y, 1)
+
+# Create scatter plot
+plt.scatter(x, y, color='blue', label='Data')
+
+# Add the trendline
+plt.plot(x, m*x + b, color='red', label='Trendline')
+
+# Add labels and title
+plt.xlabel('X-axis')
+plt.ylabel('Y-axis')
+plt.title('Scatter Plot with Trendline')
+
+# Add legend
+plt.legend()
+plt.grid(True)
+# Show plot
+plt.show()
+
+# Create scatter plot
+
+
+# Add the trendline
+
+
+# Add labels and title
+
+
+# Add legend
+
+
+# Show plot
