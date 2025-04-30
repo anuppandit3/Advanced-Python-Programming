@@ -1,0 +1,27 @@
+'''class Employee:
+	pass
+'''
+
+
+'''class Employee:
+	pass
+'''
+# Define the Employee class with a pass keyword
+class Employee:
+    pass
+
+# Create an instance of the Employee class
+Emp_1 = Employee()
+
+# Take the input for the name of the employee
+Emp_1.name = input("name: ")
+
+# Assign a salary of 25000 to Emp_1
+Emp_1.salary = 25000
+
+# Print the name and salary of the employee
+print("Emp_1.name:", Emp_1.name)
+print("Emp_1.salary:", Emp_1.salary)
+
+
+
