@@ -1,0 +1,60 @@
+'''class Person:
+	def __init__(self, name):
+		self.name = name
+		self._age = None
+
+    # Implement the property decorator here
+
+
+	# Implement the age.setter decorator here
+
+
+name = input("Enter your name: ")
+person = Person(name)
+while True:
+	try:
+		age = int(input("Enter your age: "))
+		# Set the age attribute of the person object
+		
+		
+		break
+	except ValueError:
+		print("Invalid input. Age must be a positive integer.")
+
+print(f"Name: {person.name}")
+print(f"Age: {person.age}")'''
+
+
+
+
+
+
+
+class Person:
+    def __init__(self, name):
+        self.name = name
+        self._age = None
+
+    @property
+    def age(self):
+        return self._age
+
+    @age.setter
+    def age(self, value):
+        if isinstance(value, int) and value > 0:
+            self._age = value
+        else:
+            raise ValueError("Age must be a positive integer.")
+
+name = input("Enter your name: ")
+person = Person(name)
+while True:
+    try:
+        age = int(input("Enter your age: "))
+        person.age = age  # Set the age using the setter
+        break
+    except ValueError:
+        print("Invalid input. Age must be a positive integer.")
+
+print(f"Name: {person.name}")
+print(f"Age: {person.age}")
